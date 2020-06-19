@@ -349,6 +349,7 @@ export default {
      * 表单赋值
      */
     handleCopy(data) {
+      Object.assign(this.model,data)
       this.formCustom.items.forEach(item => {
         if (!item.key) return;
         item.value = this.handleRecursion(data, item.key.split("."));
